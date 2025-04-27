@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food Court</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f8fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 55px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Food Court Section */
+        .food-court-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            gap: 30px;
+            margin-top: -20px;
+        }
+
+        /* Food Stall Styling */
+        .food-stall {
+            background-color: #ffffff;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .food-stall:hover,
+        .food-stall:focus-within {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            border-color: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+        }
+
+        .food-stall img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .food-stall h3 {
+            color: #333;
+            font-size: 26px;
+            margin: 15px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .food-stall p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .food-stall .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4caf50;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 10px;
+        }
+
+        /* Dropdown Menu Styling */
+        .menu-dropdown {
+            margin: 15px 0;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            width: 80%;
+        }
+
+        .menu-dropdown:focus {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+        }
+
+        /* Button Styling */
+        .food-stall .order-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            outline: none;
+            border: 2px solid transparent;
+        }
+
+        .food-stall .order-button:focus {
+            border-color: #2e7d32; /* Highlight border on focus */
+            box-shadow: 0 0 5px #2e7d32; /* Add a glow effect */
+        }
+
+        .food-stall .order-button:hover {
+            background-color: #388e3c;
+            transform: translateY(-3px);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 18px;
+        }
+
+        footer p {
+            margin-top: 20px;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
+            .food-court-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Indian Food Court!</h1>
+    <p>Explore the authentic flavors of India's diverse cuisines</p>
+</header>
+
+<main>
+    <div class="food-court-section">
+        <!-- Food Stall 1 - Gujarati Cuisine -->
+        <article class="food-stall" tabindex="0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzy83cKgvT3cJ2OeFGfIbMH2GjkrjP370TrA&s" alt="Gujarati Dhokla" />
+            <h3>Gujarati Cuisine</h3>
+            <p>Delicious and savory dishes from the heart of Gujarat.</p>
+            
+
+            <!-- Dropdown menu for Gujarati dishes -->
+            <select class="menu-dropdown" aria-label="Select your item from Gujarati cuisine">
+                <option value="" disabled selected>Select a dish</option>
+                <option value="dhokla">Dhokla</option>
+                <option value="khandvi">Khandvi</option>
+                <option value="thepla">Thepla</option>
+                <option value="undhiyu">Undhiyu
+                    <option value="gujrati thali">gujrati thali</option>
+                </option>
+            </select>
+
+            <a href="#" class="order-button" aria-label="Order from Gujarati Cuisine">Order Now</a>
+        </article>
+
+        <!-- Food Stall 2 - Maharashtrian Cuisine -->
+        <article class="food-stall" tabindex="0">
+            <img src="https://aromaticessence.co/wp-content/uploads/2022/08/ukadiche_modak_featured.jpg" alt="Maharashtrian Pav Bhaji" />
+            <h3>Maharashtrian Cuisine</h3>
+            <p>Flavorsome dishes from the state of Maharashtra.</p>
+           
+
+            <!-- Dropdown menu for Maharashtrian dishes -->
+            <select class="menu-dropdown" aria-label="Select your item from Maharashtrian cuisine">
+                <option value="" disabled selected>Select a dish</option>
+                <option value="pavbhaji">Pav Bhaji</option>
+                <option value="pohe">Pohe</option>
+                <option value="vada-pav">Vada Pav</option>
+                <option value="misal">Misal Pav</option>
+                <option value="Maharashtrian Thali">Maharashtrian Thali</option>
+                <option value="Ukadiche Modak">Ukadiche Modak</option>
+            </select>
+
+            <a href="#" class="order-button" aria-label="Order from Maharashtrian Cuisine">Order Now</a>
+        </article>
+
+        <!-- Food Stall 3 - Punjabi Cuisine -->
+        <article class="food-stall" tabindex="0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi5nrPf88xMafsli6sdPC5HG6t0MRnU0GgtQ&s" alt="Punjabi Sarson Da Saag" />
+            <h3>Punjabi Cuisine</h3>
+            <p>Rich and hearty food from Punjab, known for its bold flavors.</p>
+
+            <!-- Dropdown menu for Punjabi dishes -->
+            <select class="menu-dropdown" aria-label="Select your item from Punjabi cuisine">
+                <option value="" disabled selected>Select a dish</option>
+                <option value="sarson-da-saag">Sarson Da Saag</option>
+                <option value="makki-di-roti">Makki Di Roti</option>
+                <option value="butter-chicken">Butter Chicken</option>
+                <option value="chole-bhature">Chole Bhature</option>
+                <option value="Special Lassi"></option>
+                <option value="special Mahathali">Special Punjabi Thali</option>
+            </select>
+
+            <a href="#" class="order-button" aria-label="Order from Punjabi Cuisine">Order Now</a>
+        </article>
+
+        <!-- Food Stall 4 - South Indian Cuisine -->
+        <article class="food-stall" tabindex="0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTinCKGPNr2g5zx4Qet43b2n3rGXhO-_ppJww&s" alt="South Indian Dosa" />
+            <h3>South Indian Cuisine</h3>
+            <p>Popular dishes like dosas, idlis, and sambar from South India.</p>
+          
+            <!-- Dropdown menu for South Indian dishes -->
+            <select class="menu-dropdown" aria-label="Select your item from South Indian cuisine">
+                <option value="" disabled selected>Select a dish</option>
+                <option value="dosa">Dosa</option>
+                <option value="idli">Idli</option>
+                <option value="sambar">Sambar</option>
+                <option value="vada">Medu Vada</option>
+                <option value="special Thali">Special Thali</option>
+            </select>
+
+            <a href="#" class="order-button" aria-label="Order from South Indian Cuisine">Order Now</a>
+        </article>
+    </div>
+</main>
+
+<footer>
